@@ -1,0 +1,10 @@
+name: Run RunViz Proxy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call_public_workflow:
+    uses: RunViz/workflows/.github/workflows/generate-endpoint-diagram.yml@main
+    with:
+      repo_name: ${{ github.repository }}
